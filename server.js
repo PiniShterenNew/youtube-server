@@ -74,7 +74,7 @@ app.get('/download-test', (req, res) => {
   console.log(`מתחיל בדיקת הורדה של סרטון קצר...`);
   
   // הפעלת yt-dlp עם סרטון קצר - שים לב להסרת --no-part
-  const ytdlp = spawn('./yt-dlp.exe', [
+  const ytdlp = spawn('./yt-dlp_linux', [
     '-f', 'best[filesize<5M]', // סרטון קטן לבדיקה
     '-o', outputPath,
     videoURL
